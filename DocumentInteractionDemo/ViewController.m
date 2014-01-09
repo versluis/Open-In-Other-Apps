@@ -9,6 +9,11 @@
 #import "ViewController.h"
 
 @interface ViewController ()
+@property (strong, nonatomic) IBOutlet UIBarButtonItem *openButton;
+@property (nonatomic, strong) UIDocumentInteractionController *controller;
+
+- (IBAction)buttonPressed:(id)sender;
+- (IBAction)sendButtonPressed:(id)sender;
 
 @end
 
@@ -24,6 +29,52 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIDocumentInteractionController *)controller {
+    
+    if (!_controller) {
+        _controller = [[UIDocumentInteractionController alloc]init];
+        _controller.delegate = self;
+    }
+    return _controller;
+}
+
+- (IBAction)buttonPressed:(id)sender {
+    
+    // here's a URL from our bundle
+    NSURL *documentURL = [[NSBundle mainBundle]URLForResource:@"focuslines" withExtension:@"png"];
+    
+    // pass it to our document interaction controller
+    self.controller.URL = documentURL;
+    
+    // present the preview
+    [self.controller presentPreviewAnimated:YES];
+}
+
+- (IBAction)sendButtonPressed:(id)sender {
+    
+    // send a ZIP file over to Dropbox
+    NSURL *zipURL = [[NSBundle mainBundle]URLForResource:@"Colours" withExtension:@"zip"];
+    self.controller.URL = zipURL;
+    [self.controller presentOpenInMenuFromBarButtonItem:self.openButton animated:YES];
+}
+
+#pragma mark - Delegate Methods
+
+- (UIViewController *)documentInteractionControllerViewControllerForPreview:(UIDocumentInteractionController *)controller {
+    
+    return  self;
+}
+
+- (void)documentInteractionController:(UIDocumentInteractionController *)controller willBeginSendingToApplication:(NSString *)application {
+    
+    NSLog(@"Starting to send this puppy to %@", application);
+}
+
+- (void)documentInteractionController:(UIDocumentInteractionController *)controller didEndSendingToApplication:(NSString *)application {
+    
+    NSLog(@"We're done sending the document.");
 }
 
 @end

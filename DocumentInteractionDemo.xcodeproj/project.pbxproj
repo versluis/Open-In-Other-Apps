@@ -21,6 +21,8 @@
 		D25325AF187F10CD00AF426F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D2532591187F10CD00AF426F /* UIKit.framework */; };
 		D25325B7187F10CD00AF426F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D25325B5187F10CD00AF426F /* InfoPlist.strings */; };
 		D25325B9187F10CD00AF426F /* DocumentInteractionDemoTests.m in Sources */ = {isa = PBXBuildFile; fileRef = D25325B8187F10CD00AF426F /* DocumentInteractionDemoTests.m */; };
+		D25325C3187F120400AF426F /* focuslines.png in Resources */ = {isa = PBXBuildFile; fileRef = D25325C2187F120400AF426F /* focuslines.png */; };
+		D25325C5187F13CE00AF426F /* Colours.zip in Resources */ = {isa = PBXBuildFile; fileRef = D25325C4187F13CE00AF426F /* Colours.zip */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		D25325B4187F10CD00AF426F /* DocumentInteractionDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "DocumentInteractionDemoTests-Info.plist"; sourceTree = "<group>"; };
 		D25325B6187F10CD00AF426F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		D25325B8187F10CD00AF426F /* DocumentInteractionDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DocumentInteractionDemoTests.m; sourceTree = "<group>"; };
+		D25325C2187F120400AF426F /* focuslines.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = focuslines.png; sourceTree = "<group>"; };
+		D25325C4187F13CE00AF426F /* Colours.zip */ = {isa = PBXFileReference; lastKnownFileType = archive.zip; path = Colours.zip; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +121,8 @@
 				D253259F187F10CD00AF426F /* Main.storyboard */,
 				D25325A2187F10CD00AF426F /* ViewController.h */,
 				D25325A3187F10CD00AF426F /* ViewController.m */,
+				D25325C2187F120400AF426F /* focuslines.png */,
+				D25325C4187F13CE00AF426F /* Colours.zip */,
 				D25325A5187F10CD00AF426F /* Images.xcassets */,
 				D2532594187F10CD00AF426F /* Supporting Files */,
 			);
@@ -228,9 +234,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D25325C3187F120400AF426F /* focuslines.png in Resources */,
 				D25325A6187F10CD00AF426F /* Images.xcassets in Resources */,
 				D2532598187F10CD00AF426F /* InfoPlist.strings in Resources */,
 				D25325A1187F10CD00AF426F /* Main.storyboard in Resources */,
+				D25325C5187F13CE00AF426F /* Colours.zip in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 			};
@@ -367,7 +375,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -381,6 +389,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DocumentInteractionDemo/DocumentInteractionDemo-Prefix.pch";
 				INFOPLIST_FILE = "DocumentInteractionDemo/DocumentInteractionDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -394,6 +403,7 @@
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "DocumentInteractionDemo/DocumentInteractionDemo-Prefix.pch";
 				INFOPLIST_FILE = "DocumentInteractionDemo/DocumentInteractionDemo-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
