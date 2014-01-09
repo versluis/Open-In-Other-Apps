@@ -43,7 +43,7 @@
 - (IBAction)buttonPressed:(id)sender {
     
     // here's a URL from our bundle
-    NSURL *documentURL = [[NSBundle mainBundle]URLForResource:@"focuslines" withExtension:@"png"];
+    NSURL *documentURL = [[NSBundle mainBundle]URLForResource:@"Colours" withExtension:@"zip"];
     
     // pass it to our document interaction controller
     self.controller.URL = documentURL;
@@ -57,7 +57,13 @@
     // send a ZIP file over to Dropbox
     NSURL *zipURL = [[NSBundle mainBundle]URLForResource:@"Colours" withExtension:@"zip"];
     self.controller.URL = zipURL;
-    [self.controller presentOpenInMenuFromBarButtonItem:self.openButton animated:YES];
+    
+    if (![self.controller presentOpenInMenuFromBarButtonItem:self.openButton animated:YES]) {
+        
+        UIAlertView *alertView = [[UIAlertView alloc]initWithTitle:nil message:@"You don't have an app installed that can handle ZIP files." delegate:self cancelButtonTitle:@"Thanks!" otherButtonTitles:nil, nil];
+        [alertView show];
+    }
+    
 }
 
 #pragma mark - Delegate Methods

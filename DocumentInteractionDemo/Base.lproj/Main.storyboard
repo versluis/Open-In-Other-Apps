@@ -5,7 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller - Open in Other Apps-->
+        <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="ViewController" sceneMemberID="viewController">
@@ -20,7 +20,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gIW-Pe-lLb">
                                 <rect key="frame" x="63" y="225" width="194" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Preview Document">
+                                <state key="normal" title="Preview a PNG File">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -31,14 +31,15 @@
                                 <rect key="frame" x="20" y="84" width="280" height="131"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">This app demonstrates how to use the UIDocumentInteractionController. Tap "Preview Document" to show a PNG file. Tap the Action Button (top right) to open a ZIP file in an app that can handle them (which must be installed).</string>
+                                <string key="text">This app demonstrates how to use the UIDocumentInteractionController. You can preview a PNG file or open a ZIP File in another app.</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Open in Other Apps" id="iD8-nd-0s8">
-                        <barButtonItem key="rightBarButtonItem" systemItem="action" id="Sgc-vW-mbb">
+                    <navigationItem key="navigationItem" id="iD8-nd-0s8">
+                        <barButtonItem key="rightBarButtonItem" title="Open a ZIP File" id="Sgc-vW-mbb">
                             <connections>
                                 <action selector="sendButtonPressed:" destination="vXZ-lx-hvc" id="cvT-Zv-WcO"/>
                             </connections>
